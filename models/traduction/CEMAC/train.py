@@ -172,15 +172,13 @@ print(f"Pourcentage de la mémoire maximale réservée = {used_percentage} %.")
 print(f"Pourcentage de la mémoire maximale réservée pour l'entraînement = {lora_percentage} %.")
 
 
-#on passe   linference 
+#on passe   l'inference: recommandé après du (Instruction Finetuning).
 
 
 FastLanguageModel.for_inference(model
 
 inputs = tokenizer(
-[
-    alpaca_prompt.format(
-        "Traduis la phrase suivante en Fang:", 
+[ ("Traduis la phrase suivante en Fang:", 
         "Bonjour, comment allez-vous?",)
 ], return_tensors = "pt").to("cuda")
 
