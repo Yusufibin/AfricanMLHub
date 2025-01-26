@@ -54,7 +54,7 @@ dataset = Dataset.from_dict({"text": formatted_dataset})
 
 dataset = dataset.train_test_split(train_size = 0.01)["train"]
 
-dataset = dataset.map(formatting_prompts_func, batched = True,)
+#dataset = dataset.map(formatting_prompts_func, batched = True,)
 
 from transformers import TrainingArguments
 from unsloth import is_bfloat16_supported
